@@ -8,6 +8,7 @@ class Board
   attr_accessor :board
 
   def build_board
+    # Makes a board of nodes (dist and par default to nil)
     coords = [0,1,2,3,4,5,6,7]
     coords.each do |x|
       coords.each do |y|
@@ -17,6 +18,7 @@ class Board
   end
 
   def bfs(x, y)
+    # adds dist and par info to nodes based on source square
     source = find_square(x, y)
     q = []
     source.dist = 0
@@ -35,6 +37,7 @@ class Board
   end
   
   def find_square(x, y)
+    #finds node for given co-ordinate pair
     @board[x][y]
   end
 end
