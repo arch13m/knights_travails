@@ -23,6 +23,6 @@ class Node
         valid_moves.push [new_x, new_y]
       end
     end
-    return valid_moves
+    valid_moves
   end
 end
